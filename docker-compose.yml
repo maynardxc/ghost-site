@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  ghost-blog:
+    build: blog/ghost-blog
+    image: maynardxc-blog:1.21.4
+    ports:
+      - "2368:2368"
+    volumes:
+      - ./blog/content:/var/lib/ghost/content
+      - ./theme:/var/lib/ghost/current/content/themes/gotigers
