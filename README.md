@@ -25,8 +25,14 @@ GHOST_VERSION 1.21.4
 
 ## Tagging of Posts
 
-A quote tag
+### Quotes
 
+A quote tag
+No title
+Put quote sayers name in underscores, _John Smith_
+
+# TODO
+* Format photo posts
 
 
 # Issues
