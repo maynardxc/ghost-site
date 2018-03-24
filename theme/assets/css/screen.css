@@ -473,46 +473,48 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 /* Special Styling for home page grid (below):
 
-The first (most recent) post in the list is styled to be bigger than the others and take over the full width of the grid to give it more emphasis. Wrapped in a media query to make sure this only happens on large viewports / desktop-ish devices.
+The first (most recent) post in the list is styled to be bigger than the others
+ and take over the full width of the grid to give it more emphasis. Wrapped in a
+ media query to make sure this only happens on large viewports / desktop-ish devices.
 
  */
 
 @media (min-width: 795px) {
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) {
         flex: 1 1 100%;
         flex-direction: row;
     }
 
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image-link {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) .post-card-image-link {
         position: relative;
         flex: 1 1 auto;
         border-radius: 5px 0 0 5px;
     }
 
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-image {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) .post-card-image {
         position: absolute;
         width: 100%;
         height: 100%;
     }
 
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-content {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) .post-card-content {
         flex: 0 1 357px;
     }
 
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) h2 {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) h2 {
         font-size: 2.6rem;
     }
 
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) p {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) p {
         font-size: 1.8rem;
         line-height: 1.55em;
     }
 
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-content-link {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) .post-card-content-link {
         padding: 30px 40px 0;
     }
 
-    .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) .post-card-meta {
+    .home-template .post-feed .post-card:nth-child(6n):not(.no-image) .post-card-meta {
         padding: 0 40px 30px;
     }
 }
@@ -1920,18 +1922,28 @@ article.tag-quote section.post-full-content {
   margin: 0 20px 40px;
   padding: 0;
   min-height: 230;
+  max-height: 300;
   font-family: Georgia, serif;
-  font-size: 2.6rem;
-  line-height: 1.6em;
+  font-size: 15px;
+  /* line-height: 1.1em; */
   background: #fff;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 article.tag-quote section.post-full-content em {
-  font-size: 1.4rem;
+  font-size: 12px;
 }
 
+
+article.tag-photo .post-card-author {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: color(var(--whitegrey) l(+4%));
+    opacity: 0.6;
+}
 
 @keyframes backgroundScroll {
   0% { background-position: 50% 50%; }
@@ -1944,7 +1956,6 @@ article.tag-quote section.post-full-content em {
 
 .background-scroll {
   width: 100%;
-  height: 35em;
   background-size: contain;
   background-position: 50% 50%;
   animation: backgroundScroll 60s ease-in-out 1s infinite;
