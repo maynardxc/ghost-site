@@ -388,7 +388,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     margin: 0 20px 40px;
     min-height: 300px;
     background: #fff center center;
-    background-size: cover;
+    background-size: contain;
     border-radius: 5px;
     box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
     transition: all 0.5s ease;
@@ -1919,7 +1919,7 @@ article.tag-quote section.post-full-content {
   position: relative;
   margin: 0 20px 40px;
   padding: 0;
-  min-height: 300px;
+  min-height: 230;
   font-family: Georgia, serif;
   font-size: 2.6rem;
   line-height: 1.6em;
@@ -1930,4 +1930,22 @@ article.tag-quote section.post-full-content {
 }
 article.tag-quote section.post-full-content em {
   font-size: 1.4rem;
+}
+
+
+@keyframes backgroundScroll {
+  0% { background-position: 50% 50%; }
+  33% { background-position: 1% 50%; }
+  40% { background-position: 1% 50%; }
+  66% { background-position: 99% 50%; }
+  75% { background-position: 99% 50%; }
+  100% { background-position: 50% 50%; }
+}
+
+.background-scroll {
+  width: 100%;
+  height: 35em;
+  background-size: contain;
+  background-position: 50% 50%;
+  animation: backgroundScroll 60s ease-in-out 1s infinite;
 }
