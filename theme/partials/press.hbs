@@ -11,12 +11,12 @@
           <span class="post-card-tags">{{primary_tag.name}}</span>
         {{/if}}
       </header>
-
-      <section class="post-full-content">
-        <p>{{content}}</p>
-      </section>
-    </a>
-    <footer class="post-card-meta">
-    </footer>
+        <section class="post-card-excerpt">
+          <p>{{excerpt words="33"}}</p>
+        </section>
+      </a>
+      <footer class="post-card-meta">
+        <small class="post-card-title">{{title}}</small>
+      </footer>
   </div>
 </article>
