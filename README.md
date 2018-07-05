@@ -32,7 +32,16 @@ No title
 Put quote sayers name in underscores, _John Smith_
 
 # TODO
-* Format photo posts
+* Create navigation menu
+  - course map
+  - press, photos, quotes, etc
+* Main menu to show most recent of echo type
+* Calendar integration
+* logging in
+* link to photo site
+* more recent press
+* more photos?  Can read from gallery?
+
 
 
 # Issues

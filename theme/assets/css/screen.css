@@ -20,6 +20,7 @@ production stylesheet in assets/built/screen.css
 9.  Error Template
 10. Subscribe Overlay
 11. Site Footer
+12. Tigers!
 
 */
 
@@ -29,7 +30,8 @@ production stylesheet in assets/built/screen.css
 @import "global.css";
 
 body {
-    background: #f4f8fb;
+    /* background: #f4f8fb; */
+    background-image: url('/content/images/2018/07/tiger-pattern-seamless-large-dirty.jpg');
 }
 
 .img {
@@ -1917,8 +1919,15 @@ Usage (In Ghost editor):
 }
 
 
+/* 12. Tigers!  Styles for article tags
+/* ---------------------------------------------------------- */
+
+/* 12. Quotes (tag-quote)
+/* ---------------------------------------------------------- */
+.tag-quote,
 article.tag-quote section.post-full-content {
   position: relative;
+  border: 8px solid #332000;
   margin: 0 20px 40px;
   padding: 0;
   min-height: 230;
@@ -1926,7 +1935,7 @@ article.tag-quote section.post-full-content {
   font-family: Georgia, serif;
   font-size: 15px;
   /* line-height: 1.1em; */
-  background: #fff;
+  background: #ada882 center center;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1934,29 +1943,20 @@ article.tag-quote section.post-full-content {
 article.tag-quote section.post-full-content em {
   font-size: 12px;
 }
-
-
-article.tag-photo .post-card-author {
-    font-size: 1.3rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    background-color: color(var(--whitegrey) l(+4%));
-    opacity: 0.6;
+article.tag-quote section.post-full-content blockquote {
+  border-left: 3px solid #332000;
 }
 
-@keyframes backgroundScroll {
-  0% { background-position: 50% 50%; }
-  33% { background-position: 1% 50%; }
-  40% { background-position: 1% 50%; }
-  66% { background-position: 99% 50%; }
-  75% { background-position: 99% 50%; }
-  100% { background-position: 50% 50%; }
+/* 12. Photos (photo)
+/* ---------------------------------------------------------- */
+.tag-photo {
+  border: 8px solid #332000;
+  color: #dac59b;
 }
 
-.background-scroll {
-  width: 100%;
-  background-size: contain;
-  background-position: 50% 50%;
-  animation: backgroundScroll 60s ease-in-out 1s infinite;
+/* 12. News stories (tag-press)
+/* ---------------------------------------------------------- */
+.tag-press {
+  border: 8px solid #332000;
+  background: #8f7341 center center;
 }
